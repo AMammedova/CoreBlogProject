@@ -1,0 +1,17 @@
+﻿@model List<Comment>
+
+<div class="comment-top" id="cont">
+    <h4>Comments</h4>
+    @foreach (var item in Model)
+    {
+<div class="media">
+    <img src="~/Template/images/@item.User.UserImage" alt="" class="img-fluid" />
+    <div class="media-body">
+        <h5 class="mt-0">@item.User.NickName</h5>
+        <p>
+            @item.CommentContent
+        </p>
+    </div>
+</div>
+    }
+</div>
